@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace COMP123_S2019_Lesson10B
 {
-    public partial class Form1 : Form
+    public partial class EndForm : Form
     {
-        public Form1()
+        public EndForm()
         {
             InitializeComponent();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Program.Forms[FormName.MAIN_FORM].Show();
+            this.Hide();
         }
     }
 }
